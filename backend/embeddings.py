@@ -1,7 +1,10 @@
-from langchain.embeddings import OpenAIEmbeddings
+from sentence_transformers import SentenceTransformer
 
-def create_embeddings():
 
-    embeddings = OpenAIEmbeddings()
+def create_embedding_model():
 
-    return embeddings
+    model = SentenceTransformer(
+        "all-MiniLM-L6-v2"
+    )
+
+    return model

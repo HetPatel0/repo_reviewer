@@ -1,4 +1,4 @@
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
 def split_code(code_files):
@@ -14,7 +14,7 @@ def split_code(code_files):
 
         chunks = splitter.split_text(file["content"])
 
-        for chunk in chunks:
+        for chunk in chunks:    
             docs.append({
                 "path": file["path"],
                 "content": chunk
